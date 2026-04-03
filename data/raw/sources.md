@@ -1,0 +1,2 @@
+- atm_options/* soruced by Sanchay from ICICI API
+- series/NIFTY 50_minute.csv from https://www.kaggle.com/datasets/debashis74017/nifty-50-minute-data
