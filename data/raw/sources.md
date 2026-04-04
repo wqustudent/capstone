@@ -1,2 +1,7 @@
-- atm_options/* soruced by Sanchay from ICICI API
+- atm_options/* call & put prices from ICICI Breeze API
 - series/NIFTY 50_minute.csv from https://www.kaggle.com/datasets/debashis74017/nifty-50-minute-data
+- nifty holiday calendars
+  - 2026 holidays https://archives.nseindia.com/content/circulars/CMTR71775.pdf
+  - 2025 holidays https://archives.nseindia.com/content/circulars/CMTR65587.pdf
+  - 2024 holidays https://archives.nseindia.com/content/circulars/CD59917.pdf
+  - 2023 holidays https://archives.nseindia.com/content/circulars/FAOP54759.pdf
