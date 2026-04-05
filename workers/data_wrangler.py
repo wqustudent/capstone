@@ -9,7 +9,7 @@ class DataWrangler:
         self.index_data_path = Path(__file__).parent / "data" / "raw" / "series" / "NIFTY 50_minute.csv"
         self.processed_data_folder = Path(__file__).parent / "data" / "processed"
 
-    def preprocess(self):
+    def preprocess(self) -> pd.DataFrame:
         # load & pre-process data
         atm_options = self._load_atm_options()
         s = self._load_index_data()

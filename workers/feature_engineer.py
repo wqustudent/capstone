@@ -2,11 +2,10 @@ import pandas as pd
 
 
 class FeatureEngineer:
-    def __init__(self):
+    def __init__(self, data: pd.DataFrame):
         self.df = None
 
-    def engineer_features(self, data: pd.DataFrame) -> pd.DataFrame:
-        self.df = data
+    def engineer_features(self) -> pd.DataFrame:
         self._add_standard_features()
         self._add_cross_instrument_features()
         self._add_fractal_features()
