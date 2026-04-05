@@ -4,7 +4,7 @@ import pprint as pp
 import pandas as pd
 
 
-class DataProcessor:
+class OptionsDataLoader:
     def __init__(self):
         self.atm_options_data_path = 'data/raw/atm_options'
         self.series_data_path = 'data/raw/series'
@@ -56,12 +56,12 @@ class DataProcessor:
 
 
 if __name__ == "__main__":
-    print(f"\n\n{'='*20} RUNNING DATA PROCESSOR {'='*20}")
-    processor = DataProcessor()
+    print(f"\n\n{'=' * 20} RUNNING DATA PROCESSOR {'=' * 20}")
+    worker = OptionsDataLoader()
 
-    dates = processor.find_available_data_dates()
+    dates = worker.find_available_data_dates()
     pp.pprint(dates)
     print(f"{len(dates)=}")
 
     # processor.process_options_data_for_a_given_date('2024-03-26')
-    processor.process_options_data()
+    worker.process_options_data()

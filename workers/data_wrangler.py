@@ -2,6 +2,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from options_data_loader import OptionsDataLoader
+
 
 class DataWrangler:
     def __init__(self):
@@ -21,8 +23,16 @@ class DataWrangler:
 
         return df
 
-    def _load_atm_options(self) -> pd.DataFrame:
-        pass
+    @staticmethod
+    def _load_atm_options() -> pd.DataFrame:
+        loader = OptionsDataLoader()
+        dates = loader.find_available_data_dates()
+        pp.pprint(dates)
+        print(f"{len(dates)=}")
+
+        # processor.process_options_data_for_a_given_date('2024-03-26')
+        df = loader.process_options_data()
+        return df
 
     def _load_index_data(self) -> pd.Series:
         pass
